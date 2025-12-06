@@ -1,0 +1,92 @@
+* {
+   box-sizing: border-box; 
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+    background: whitesmoke;
+}
+
+header {
+    background: plum;
+    height: 66px;
+}
+
+header *{
+    color: white;
+}
+
+header .logo{
+    float: left;
+    height: inherit;
+    margin-left: 2em;
+}
+
+header .logo-text {
+margin: 9px;
+}
+
+header .logo-text span{
+color: purple;
+}
+
+header ul {
+    float: right;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+header ul li {
+    float: left;
+    position: relative;
+}
+
+header ul li ul {
+position: absolute;
+top: 66px;
+right: 0px;
+width: 180px;
+display: none;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li{
+    width: 100%;
+}
+
+header ul li ul li a {
+    padding: 10px;
+    color: gray;
+    background: whitesmoke;   
+}
+
+header ul li ul li a.logout{
+    color: rgb(86, 14, 42);
+}
+
+header ul li ul li a:hover {
+    background: rgb(255, 211, 255);
+    transition: 0.5s;
+}
+
+header ul li a{
+    display: block;
+    padding: 21px;
+    font-size: 1.1em;
+    text-decoration: none;
+
+}
+
+header ul li a:hover {
+    background: purple;
+    transition: 0.5s;
+}
+
+header .menu-toggle {
+    display:  none;
+}
