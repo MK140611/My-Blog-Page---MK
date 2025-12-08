@@ -8,6 +8,11 @@ body{
     background: whitesmoke;
 }
 
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
 header {
     background: plum;
     height: 66px;
@@ -49,6 +54,7 @@ top: 66px;
 right: 0px;
 width: 180px;
 display: none;
+z-index: 88888;
 }
 
 header ul li:hover ul {
@@ -91,6 +97,76 @@ header .menu-toggle {
     display:  none;
 }
 
+.page-wrapper a:hover {
+color: pink
+}
+
+/* ////////////// */
+
+.post-slider{
+    position: relative;
+    border: 1px;
+}
+
+.post-slider .slider-title{
+    text-align: center;
+    margin: 30px auto;
+}
+
+.post-slider .next{
+    position: absolute;
+    top: 50%;
+    right: 30px;
+    font-size: 2em;
+    color:blueviolet;
+    cursor: pointer;
+
+}
+
+.post-slider .prev{
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    font-size: 2em;
+    color:blueviolet;
+    cursor: pointer;
+}
+
+
+
+.post-slider .post-wrapper{
+    width: 84%;
+    height: 350px;
+    margin: 0px auto;
+    overflow: hidden;
+    padding: 10px 0px 10px 0px;
+    border: 1px;
+    
+}
+
+.post-slider .post-wrapper .post {
+    width: 300px;
+    height: 330px;
+    margin: 0px 10px;
+    display: inline-block;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 1rem 1rem 1rem -1rem #808080;
+}
+
+.post-slider .post-wrapper .post .post-info {
+    height: 130px;
+    padding: 0px 5px;
+    
+}
+
+.post-slider .post-wrapper .post .slider-image{
+    width: 100%;
+    height: 200px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
 
 /* /////////// */
 
