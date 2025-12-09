@@ -2,6 +2,7 @@
    box-sizing: border-box; 
 }
 
+html, 
 body{
     padding: 0px;
     margin: 0px;
@@ -29,6 +30,19 @@ a{
 .btn:hover {
     color: white !important;
     background: purple;
+}
+
+.text-input {
+ padding: .7rem 1rem; 
+ display: block;
+ width: 100%;
+ border-radius: 5px;
+ border: 1px solid #e0e0e0;
+ outline: none;
+ color: rgb(78, 78, 78);
+ line-height: 1.5rem;
+ font-size: 1.2em;
+ 
 }
 
 header {
@@ -113,6 +127,10 @@ header ul li a:hover {
 
 header .menu-toggle {
     display:  none;
+}
+
+.page-wrapper{
+    min-height: 100%;
 }
 
 .page-wrapper a:hover {
@@ -240,16 +258,75 @@ border: 1px solid pink;
     margin: 20px;
 }
 
-
-
 .content .sidebar {
     width: 30%;
     float:left;
     height: 300px;
 }
 
+.content .sidebar .section {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.content .sidebar .section.title {
+    margin: 10px 0px 10px 0px;
+}
+
+.content .sidebar .section.search {
+    margin-top: 80px;
+}
+
+
+.content .sidebar .section.topics ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    border-bottom: solid #e0e0e0;
+    transition: all 0.3s;
+
+}
+
+.content .sidebar .section.topics ul li a {
+    display: block;
+    padding: 15px 0px 15px 0px;
+    border-bottom: solid #e0e0e0;
+}
+
+.content .sidebar .section.topics ul li a:hover {
+    padding-left: 10px;
+    transition: all 0.3s;
+}
 
 /* /////////// */
+
+
+/* FEEEEET*/
+.footer {
+    background:plum;
+    color: white;
+    height: 400px;
+    position: relative;
+}
+
+.footer .footer-content {
+    height: 350px;
+
+}
+
+.footer .footer-bottom {
+    background: rgb(234, 183, 234);
+    color: rgb(32, 3, 33);
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 20px;
+}
 
 @media only screen and (max-width: 750px) {
     header {
