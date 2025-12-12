@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
 
-    <title>{% block title %}My Blog Site{% endblock %}</title>
+    <!-- Dynamic CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/admin.css.jinja2') }}">
 
-    {% block styles %}{% endblock %}
+    <title>{% block title %}Admin Dashboard{% endblock %}</title>
 </head>
 
 <body>
+    <!-- Header -->
     <header>
         <div class="logo">
             <h1 class="logo-text">Meia<span>'</span>s Website</h1>
@@ -21,125 +23,48 @@
         <i class="fa fa-bars menu-toggle"></i>
 
         <ul class="nav">
-            <li><a href="{{ url_for('index') }}">Home</a></li>  
-            <li><a href="{{ url_for('admin_create_post') }}">Add Post</a></li>  
-            <li><a href="{{ url_for('single_post') }}">My Blog post</a></li>
-            
             <li>
                 <a href="#">
                     <i class="fa fa-user"></i>
-                    {{ current_user.username if current_user.is_authenticated else 'Username for User' }}
+                    {{ current_user.username if current_user else 'Username' }}
                     <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
                 </a>
                 <ul>
-                    {% if current_user.is_authenticated %}
-                    <li><a href="{{ url_for('dashboard') }}">Dashboard</a></li> 
                     <li><a href="{{ url_for('logout') }}" class="logout">Logout</a></li>    
-                    {% else %}
-                    <li><a href="{{ url_for('login') }}">Sign In</a></li>
-                    {% endif %}
                 </ul>
             </li>  
         </ul>
     </header>
 
-    <div class="page-wrapper">
+    <!-- Admin wrapper -->
+    <div class="admin-wrapper">
 
-        {% block slider %}
-        <!-- Optional post slider can go here -->
-        {% endblock %}
-
-        <div class="content clearfix">
-
-            {% block main_content %}
-            <!-- Main content like posts go here -->
-            {% endblock %}
-
-            <div class="sidebar">
-
-                <div class="section search">
-                    <h2 class="section-title">Search</h2>
-                    <form action="{{ url_for('search') }}" method="post">
-                        <input type="text" name="search-term" class="text-input" placeholder="search..." />
-                    </form>
-                </div>
-
-                <div class="section topics">
-                    <h2 class="section-title">Topics</h2>
-                    <ul>
-                        {% for topic in topics %}
-                        <li><a href="{{ url_for('topic_posts', topic_id=topic.id) }}">{{ topic.name }}</a></li>
-                        {% else %}
-                        <li>No topics available</li>
-                        {% endfor %}
-                    </ul>
-                </div>
-
-            </div>
-
-        </div> <!-- end content -->
-
-    </div> <!-- end page-wrapper -->
-
-    <div class="footer">
-        <div class="footer-content">
-            <div class="footer-section about">
-                <h1 class="logo-text">Meia <span>'</span>s Website</h1>
-                <p>
-                   This website was made as a final project for App Design. 
-                   This page was super hard to make but...
-                   you can't tell me the outcome isn't amazing! 
-                   So amazing that it deserves an A+!
-                </p>
-                <div class="contact">
-                    <span><i class="fas fa-phone"></i>&nbsp;123-456-7890 (Don't Call Me...)</span>
-                    <span><i class="fas fa-envelope"></i>&nbsp;info@meiawebsite.com</span>
-                </div>
-                <div class="socials">
-                    <a href="#"><i class="fab fa-facebook"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-youtube"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-snapchat"></i></a>
-                </div>
-            </div>
-
-            <div class="footer-section links">
-                <h2>Quick Links</h2>
-                <br />
-                <ul>
-                    <a href="#"><li>Terms & Agreements</li></a>
-                    <a href="#"><li>Events</li></a>
-                    <a href="#"><li>Info</li></a>
-                    <a href="#"><li>Q&A</li></a>
-                </ul>
-            </div>
-
-            <div class="footer-section contact-form">
-                <h2>Contact Us!</h2> 
-                <br />
-                <form action="{{ url_for('contact') }}" method="post">
-                    <input type="email" name="email" class="text-input contact-input" placeholder="Your Email Address..." required />
-                    <textarea rows="4" name="message" class="text-input contact-input" placeholder="Your Message..." required></textarea>
-                    <button type="submit" class="btn btn-big contact-btn">
-                        <i class="fas fa-envelope"></i>
-                        Send
-                    </button>
-                </form>
-            </div>
-
+        <!-- Left Sidebar -->
+        <div class="left-sidebar">
+            <ul>
+                <li><a href="{{ url_for('admin_posts') }}">Manage Posts</a></li>
+                <li><a href="{{ url_for('admin_users') }}">Manage Users</a></li>
+                <li><a href="{{ url_for('admin_topics') }}">Manage Topics</a></li>
+            </ul>
         </div>
 
-        <div class="footer-bottom">
-            &copy; Meia's Website.com | Designed by Meia K | App Design
+        <!-- Admin Content -->
+        <div class="admin-content">
+            <div class="button-group">
+                {% block buttons %}{% endblock %}
+            </div>
+
+            <div class="content">
+                <h2 class="page-title">{% block page_title %}Dashboard{% endblock %}</h2>
+                {% block content %}{% endblock %}
+            </div>
         </div>
+
     </div>
 
+    <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.ckeditor.com/ckeditor5/47.3.0/ckeditor5.umd.js"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
-
-    {% block scripts %}{% endblock %}
-
 </body>
 </html>

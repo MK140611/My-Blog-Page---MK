@@ -1,36 +1,36 @@
 * {
-   box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
-html, 
-body{
-    padding: 0px;
-    margin: 0px;
+html,
+body {
+    padding: 0;
+    margin: 0;
     background: whitesmoke;
 }
 
-a{
+a {
     text-decoration: none;
     color: inherit;
 }
 
-.clearfix::after{
-   content: ''; 
-   display:block;
-   clear:both;
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
 }
 
 .btn {
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     background: purple;
     color: white;
     border: 1px solid transparent;
-    border-radius: .25rem;
+    border-radius: 0.25rem;
     font-size: 1.08em;
 }
 
 .btn-big {
-    padding: .7rem 1.3rem;
+    padding: 0.7rem 1.3rem;
     line-height: 1.3rem;
 }
 
@@ -40,19 +40,18 @@ a{
 }
 
 .text-input {
- padding: .7rem 1rem; 
- display: block;
- width: 100%;
- border-radius: 5px;
- border: 1px solid #e0e0e0;
- outline: none;
- color: rgb(78, 78, 78);
- line-height: 1.5rem;
- font-size: 1.2em;
- 
+    padding: 0.7rem 1rem;
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+    outline: none;
+    color: rgb(78, 78, 78);
+    line-height: 1.5rem;
+    font-size: 1.2em;
 }
 
-.msg{
+.msg {
     width: 100%;
     margin: 5px auto;
     padding: 8px;
@@ -60,13 +59,13 @@ a{
     list-style: none;
 }
 
-.success { 
+.success {
     color: darkolivegreen;
     border: 1px solid darkolivegreen;
     background: lightgreen;
 }
 
-.error { 
+.error {
     color: darkred;
     border: 1px solid darkred;
     background: lightcoral;
@@ -77,28 +76,28 @@ header {
     height: 66px;
 }
 
-header *{
+header * {
     color: white;
 }
 
-header .logo{
+header .logo {
     float: left;
     height: inherit;
     margin-left: 2em;
 }
 
 header .logo-text {
-margin: 9px;
+    margin: 9px;
 }
 
-header .logo-text span{
-color: purple;
+header .logo-text span {
+    color: purple;
 }
 
 header ul {
     float: right;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
 }
 
@@ -108,29 +107,29 @@ header ul li {
 }
 
 header ul li ul {
-position: absolute;
-top: 66px;
-right: 0px;
-width: 180px;
-display: none;
-z-index: 88888;
+    position: absolute;
+    top: 66px;
+    right: 0;
+    width: 180px;
+    display: none;
+    z-index: 88888;
 }
 
 header ul li:hover ul {
     display: block;
 }
 
-header ul li ul li{
+header ul li ul li {
     width: 100%;
 }
 
 header ul li ul li a {
     padding: 10px;
     color: gray;
-    background: whitesmoke;   
+    background: whitesmoke;
 }
 
-header ul li ul li a.logout{
+header ul li ul li a.logout {
     color: rgb(234, 82, 140);
 }
 
@@ -139,12 +138,11 @@ header ul li ul li a:hover {
     transition: 0.5s;
 }
 
-header ul li a{
+header ul li a {
     display: block;
     padding: 21px;
     font-size: 1.1em;
     text-decoration: none;
-
 }
 
 header ul li a:hover {
@@ -153,64 +151,57 @@ header ul li a:hover {
 }
 
 header .menu-toggle {
-    display:  none;
+    display: none;
 }
 
-.page-wrapper{
+.page-wrapper {
     min-height: 100%;
 }
 
 .page-wrapper a:hover {
-color: pink
+    color: pink;
 }
 
-/* ////////////// */
-
-.post-slider{
+/* Post Slider */
+.post-slider {
     position: relative;
-    border: 1px;
 }
 
-.post-slider .slider-title{
+.post-slider .slider-title {
     text-align: center;
     margin: 30px auto;
 }
 
-.post-slider .next{
+.post-slider .next {
     position: absolute;
     top: 50%;
     right: 30px;
     font-size: 2em;
-    color:blueviolet;
+    color: blueviolet;
     cursor: pointer;
-
 }
 
-.post-slider .prev{
+.post-slider .prev {
     position: absolute;
     top: 50%;
     left: 30px;
     font-size: 2em;
-    color:blueviolet;
+    color: blueviolet;
     cursor: pointer;
 }
 
-
-
-.post-slider .post-wrapper{
+.post-slider .post-wrapper {
     width: 84%;
     height: 350px;
-    margin: 0px auto;
+    margin: 0 auto;
     overflow: hidden;
-    padding: 10px 0px 10px 0px;
-    border: 1px;
-    
+    padding: 10px 0;
 }
 
 .post-slider .post-wrapper .post {
     width: 300px;
     height: 330px;
-    margin: 0px 10px;
+    margin: 0 10px;
     display: inline-block;
     background: white;
     border-radius: 5px;
@@ -219,36 +210,35 @@ color: pink
 
 .post-slider .post-wrapper .post .post-info {
     height: 130px;
-    padding: 0px 5px;
-    
+    padding: 0 5px;
 }
 
-.post-slider .post-wrapper .post .slider-image{
+.post-slider .post-wrapper .post .slider-image {
     width: 100%;
     height: 200px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
 }
 
-.content{
+/* Main content & sidebar */
+.content {
     width: 90%;
-    margin: 30px auto 30px;
+    margin: 30px auto;
 }
 
-.content .main-content{
-width: 70%;
-float :left;
+.content .main-content {
+    width: 70%;
+    float: left;
 }
 
-.content .main-content .single{
+.content .main-content .single {
     background: white;
     padding: 20px 50px;
     font-size: 1.1em;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
-.content .main-content .post{
+.content .main-content .post {
     width: 95%;
     height: 270px;
     margin: 20px auto;
@@ -257,82 +247,51 @@ float :left;
     position: relative;
 }
 
-.content .popular .post{
-    border-top: 1xp solid gray;
-    margin-top: 10px;
-    padding-top: 10px;
-}
-
-
-.content .main-content .single .post-title{
+.content .main-content .single .post-title {
     text-align: center;
     margin-bottom: 40px;
 }
 
-
-.content .main-content .post{ 
-    width: 95%;
-    height: 270px;
-    margin: 20% auto;
-    border-radius: 5px;
-    background: white;
-    position: relative;
-}
-
-.content .popular .post {
-    border-top: 1px solid white;
-    margin-top: 10px;
-    padding-top: 10px;
-}
-
-.content .popular .post img {
-    height: 60px;
-    width: 75px;
-    float: left;
-    margin-right: 10px;
-}
-
-
-.content .main-content .post .read-more{
+.content .main-content .post .read-more {
     position: absolute;
     bottom: 10px;
     right: 10px;
     border: 1px solid purple;
     background: transparent;
-    border-radius: 0px;
+    border-radius: 0;
     color: purple !important;
 }
 
-.content .main-content .post .read-more:hover{
+.content .main-content .post .read-more:hover {
     background: purple;
     color: white !important;
-    transition: 0,25s;
+    transition: 0.25s;
 }
+
 .content .main-content .post .post-image {
     width: 40%;
     height: 100%;
     float: left;
 }
 
-.content .main-content .post .post-preview{
+.content .main-content .post .post-preview {
     width: 60%;
     padding: 20px;
     float: right;
-
 }
 
-.content .main-content .recent-post-title{
+.content .main-content .recent-post-title {
     margin: 20px;
 }
 
 .content .sidebar {
     width: 30%;
-    float:left;
+    float: left;
     height: 300px;
 }
 
-.content .sidebar .single{
-    padding: 0px 10px
+.content .sidebar .single {
+    padding: 0 10px;
 }
 
 .content .sidebar .section {
@@ -343,26 +302,24 @@ float :left;
 }
 
 .content .sidebar .section.title {
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0;
 }
 
 .content .sidebar .section.search {
     margin-top: 80px;
 }
 
-
 .content .sidebar .section.topics ul {
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     list-style: none;
     border-bottom: solid #e0e0e0;
     transition: all 0.3s;
-
 }
 
 .content .sidebar .section.topics ul li a {
     display: block;
-    padding: 15px 0px 15px 0px;
+    padding: 15px 0;
     border-bottom: solid #e0e0e0;
 }
 
@@ -371,19 +328,18 @@ float :left;
     transition: all 0.3s;
 }
 
-/* /////////// */
-.auth-content{
+/* Auth forms */
+.auth-content {
     width: 30%;
     margin: 50px auto;
     padding: 20px;
     background: white;
-    border-radius:5px;
+    border-radius: 5px;
 }
 
 .auth-content .form-title {
     text-align: center;
 }
-
 
 .auth-content form div {
     margin-bottom: 10px;
@@ -395,15 +351,11 @@ float :left;
 
 .auth-content form div a {
     text-decoration: underline;
-
 }
 
-
-
-
-/* FEEEEET*/
+/* Footer */
 .footer {
-    background:plum;
+    background: plum;
     color: white;
     height: 400px;
     position: relative;
@@ -412,7 +364,6 @@ float :left;
 .footer .footer-content {
     height: 350px;
     display: flex;
-
 }
 
 .footer .footer-content .footer-section {
@@ -421,7 +372,7 @@ float :left;
     border: 1px solid white;
 }
 
-.footer .footer-content h1
+.footer .footer-content h1,
 .footer .footer-content h2 {
     color: white;
 }
@@ -446,39 +397,31 @@ float :left;
     display: inline-block;
     font-size: 1.3em;
     border-radius: 5px;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
 .footer .footer-content .about .socials a:hover {
     border: 1px solid white;
     color: white;
-    transition: all .3s;
+    transition: all 0.3s;
 }
 
-.footer .footer-content .links ul a{
+.footer .footer-content .links ul a {
     display: block;
     margin-bottom: 10px;
     font-size: 1.2em;
-    transition: all .3s;  
-
+    transition: all 0.3s;
 }
 
 .footer .footer-content .links ul a:hover {
     color: white;
     margin-left: 15px;
-    transition: all .3s;  
+    transition: all 0.3s;
 }
-
-.footer .footer-content .contact-form .contact-input
-/* Modifcations weren't working so nothing here rn...*/
 
 .footer .footer-content .contact-form .contact-input:focus {
     background-color: peachpuff;
 }
-
-.footer .footer-content .contact-form .contact-btn
-/* Nothing Here for rn*/
-
 
 .footer .footer-bottom {
     background: rgb(234, 183, 234);
@@ -487,21 +430,24 @@ float :left;
     width: 100%;
     text-align: center;
     position: absolute;
-    bottom: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
     padding-top: 20px;
 }
 
+/* Responsive */
 @media only screen and (max-width: 750px) {
     header {
         position: relative;
     }
+
     header ul {
         width: 100%;
-        background:purple;
-        max-height: 0px;
+        background: purple;
+        max-height: 0;
         overflow: hidden;
     }
+
     .showing {
         max-height: 100em;
     }
@@ -509,32 +455,38 @@ float :left;
     header ul li {
         width: 100%;
     }
+
     header ul li ul {
         position: static;
         display: block;
         width: 100%;
     }
+
     header ul li ul li a {
-        padding: 10px;
+        padding-left: 50px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background: purple;
         color: whitesmoke;
-        padding: left 50px;
     }
-    header ul li ul li a:hover{
+
+    header ul li ul li a:hover {
         background: pink;
     }
 
     header ul li ul li a.logout {
-        color: rgb(234, 82, 140);    
+        color: rgb(234, 82, 140);
     }
+
     header .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    font-size: 1.9em;
-}
-header .logo{
-    margin-left: .5em;
-}
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 1.9em;
+    }
+
+    header .logo {
+        margin-left: 0.5em;
+    }
 }
