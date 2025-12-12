@@ -26,7 +26,14 @@ a{
     color: white;
     border: 1px solid transparent;
     border-radius: .25rem;
+    font-size: 1.08em;
 }
+
+.btn-big {
+    padding: .7rem 1.3rem;
+    line-height: 1.3rem;
+}
+
 .btn:hover {
     color: white !important;
     background: purple;
@@ -43,6 +50,26 @@ a{
  line-height: 1.5rem;
  font-size: 1.2em;
  
+}
+
+.msg{
+    width: 100%;
+    margin: 5px auto;
+    padding: 8px;
+    border-radius: 5px;
+    list-style: none;
+}
+
+.success { 
+    color: darkolivegreen;
+    border: 1px solid darkolivegreen;
+    background: lightgreen;
+}
+
+.error { 
+    color: darkred;
+    border: 1px solid darkred;
+    background: lightcoral;
 }
 
 header {
@@ -207,13 +234,39 @@ color: pink
 .content{
     width: 90%;
     margin: 30px auto 30px;
-    border: 1px solid rebeccapurple;
 }
 
 .content .main-content{
 width: 70%;
 float :left;
-border: 1px solid pink;
+}
+
+.content .main-content .single{
+    background: white;
+    padding: 20px 50px;
+    font-size: 1.1em;
+    border-radius: 5px
+}
+
+.content .main-content .post{
+    width: 95%;
+    height: 270px;
+    margin: 20px auto;
+    border-radius: 5px;
+    background: white;
+    position: relative;
+}
+
+.content .popular .post{
+    border-top: 1xp solid gray;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+
+.content .main-content .single .post-title{
+    text-align: center;
+    margin-bottom: 40px;
 }
 
 
@@ -225,6 +278,20 @@ border: 1px solid pink;
     background: white;
     position: relative;
 }
+
+.content .popular .post {
+    border-top: 1px solid white;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.content .popular .post img {
+    height: 60px;
+    width: 75px;
+    float: left;
+    margin-right: 10px;
+}
+
 
 .content .main-content .post .read-more{
     position: absolute;
@@ -264,6 +331,10 @@ border: 1px solid pink;
     height: 300px;
 }
 
+.content .sidebar .single{
+    padding: 0px 10px
+}
+
 .content .sidebar .section {
     background: white;
     padding: 20px;
@@ -301,6 +372,33 @@ border: 1px solid pink;
 }
 
 /* /////////// */
+.auth-content{
+    width: 30%;
+    margin: 50px auto;
+    padding: 20px;
+    background: white;
+    border-radius:5px;
+}
+
+.auth-content .form-title {
+    text-align: center;
+}
+
+
+.auth-content form div {
+    margin-bottom: 10px;
+}
+
+.auth-content form p {
+    text-align: center;
+}
+
+.auth-content form div a {
+    text-decoration: underline;
+
+}
+
+
 
 
 /* FEEEEET*/
@@ -313,8 +411,74 @@ border: 1px solid pink;
 
 .footer .footer-content {
     height: 350px;
+    display: flex;
 
 }
+
+.footer .footer-content .footer-section {
+    flex: 1;
+    padding: 25px;
+    border: 1px solid white;
+}
+
+.footer .footer-content h1
+.footer .footer-content h2 {
+    color: white;
+}
+
+.footer .footer-content .about h1 span {
+    color: pink;
+}
+
+.footer .footer-content .about .contact span {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+}
+
+.footer .footer-content .about .socials a {
+    border: 1px solid gray;
+    width: 45px;
+    height: 41px;
+    padding-top: 5px;
+    margin-right: 5px;
+    text-align: center;
+    display: inline-block;
+    font-size: 1.3em;
+    border-radius: 5px;
+    transition: all .3s;
+}
+
+.footer .footer-content .about .socials a:hover {
+    border: 1px solid white;
+    color: white;
+    transition: all .3s;
+}
+
+.footer .footer-content .links ul a{
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    transition: all .3s;  
+
+}
+
+.footer .footer-content .links ul a:hover {
+    color: white;
+    margin-left: 15px;
+    transition: all .3s;  
+}
+
+.footer .footer-content .contact-form .contact-input
+/* Modifcations weren't working so nothing here rn...*/
+
+.footer .footer-content .contact-form .contact-input:focus {
+    background-color: peachpuff;
+}
+
+.footer .footer-content .contact-form .contact-btn
+/* Nothing Here for rn*/
+
 
 .footer .footer-bottom {
     background: rgb(234, 183, 234);

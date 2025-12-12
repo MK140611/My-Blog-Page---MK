@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <link rel="stylesheet" href="../../css/admin.css">
+
+
+    <title>Admin - Add User</title>
+</head>
+
+    <body>
+        <header>
+            <div class="logo">
+                <h1 class="logo-text">Meia<span>'</span>s Website</h1>
+            </div>
+
+            <i class="fa fa-bars menu-toggle"></i>
+
+            <ul class="nav">
+                
+                <li>
+                    <a href="#">
+                        <i class="fa fa-user"></i>
+                        Username for User
+                        <i class="fa fa-chevron-down" style="font-size: .8em;"></i>
+                    </a>
+                    <ul>
+                        <li><a href="#" class="logout">Logout</a></li>    
+                    </ul>
+                </li>  
+            </ul>
+        </header>
+
+        
+        <div class="admin-wrapper">
+
+            <div class="left-sidebar">
+                <ul>
+                    <li><a href="../posts/index.html"></a>Manage Posts</li>
+                    <li><a href="index,html"></a>Manage Users</li>
+                    <li><a href="../topics/index,html"></a>Manage Topics</li>
+                </ul>
+
+            </div>
+
+            <div class="admin-content">
+                <div class="button-group">
+                    <a href="create.html" class="btn btn-big">Add User</a>
+                    <a href="index.html" class="btn btn-big">Manage Users</a>
+
+                    <div class="content">
+                        <h2 class="page-title">Add User</h2>
+
+                        <form action="create.html" method="post">
+                            <div>
+                                <label>Username</label>            
+                                <input type="text" name="username="text-input">  
+                            </div>
+
+                            <div>
+                                <label>Email</label>            
+                                <input type="email" name="email="text-input">  
+                            </div>
+
+                            <div>
+                                <label>Password</label>            
+                                <input type="password" name="password="text-input">  
+                            </div>
+
+                            <div>
+                                <label>Password Confirmation</label>            
+                                <input type="password" name="passwordConf="text-input">  
+                            </div>
+
+                            <div>
+                                <label>Role</label>
+                                <select name="role">
+                                    <option value="Author">Author</option>
+                                    <option value="Admin">Admin</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <button type="submit" class="btn btn-big">Submit User </button>
+                            </div>
+                        </form>
+                    </div>
+
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"></script>
+
+        <script src="https://cdn.ckeditor.com/ckeditor5/47.3.0/ckeditor5.umd.js"></script>
+
+        <script src="../../js/scripts.js"></script>
+
+
+    </body>
+</html>
